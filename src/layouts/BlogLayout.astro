@@ -1,0 +1,113 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  date: string;
+  author?: string;
+  image?: string;
+  slug: string;
+}
+
+const {
+  title,
+  description,
+  date,
+  author = 'Maprotec',
+  image = '/og-default.jpg',
+  slug,
+} = Astro.props;
+
+const canonical = `https://maprotec.co/blog/${slug}`;
+const dateISO   = new Date(date).toISOString();
+const dateFmt   = new Date(date).toLocaleDateString('es-CO', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": title,
+  "description": description,
+  "datePublished": dateISO,
+  "dateModified": dateISO,
+  "author": { "@type": "Organization", "name": "Maprotec", "url": "https://maprotec.co" },
+  "publisher": { "@type": "Organization", "name": "Maprotec", "logo": { "@type": "ImageObject", "url": "https://maprotec.co/logo.svg" } },
+  "image": `https://maprotec.co${image}`,
+  "mainEntityOfPage": { "@type": "WebPage", "@id": canonical },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://maprotec.co" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://maprotec.co/blog" },
+    { "@type": "ListItem", "position": 3, "name": title, "item": canonical },
+  ]
+};
+---
+
+<BaseLayout
+  title={`${title} | Blog Maprotec`}
+  description={description}
+  canonical={canonical}
+  ogImage={image}
+  schema={[articleSchema, breadcrumbSchema]}
+>
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+
+    <!-- Breadcrumb nav -->
+    <nav aria-label="Ruta de navegacion" class="mb-8">
+      <ol class="flex items-center gap-2 text-xs text-ink-400 flex-wrap">
+        <li><a href="/" class="hover:text-brand transition-colors">Inicio</a></li>
+        <li aria-hidden="true">/</li>
+        <li><a href="/blog" class="hover:text-brand transition-colors">Blog</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-ink-DEFAULT font-medium truncate">{title}</li>
+      </ol>
+    </nav>
+
+    <!-- Header -->
+    <header class="mb-10">
+      <h1 class="font-display font-bold text-3xl md:text-4xl lg:text-5xl text-ink leading-tight mb-4">
+        {title}
+      </h1>
+      <p class="text-lg text-ink-600 mb-6">{description}</p>
+      <div class="flex items-center gap-4 text-sm text-ink-400 pb-6 border-b border-ink-200">
+        <time datetime={dateISO}>{dateFmt}</time>
+        <span aria-hidden="true">·</span>
+        <span>Por {author}</span>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <div class="
+      prose prose-sm md:prose-base max-w-none
+      prose-headings:font-display prose-headings:font-bold prose-headings:text-ink
+      prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
+      prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
+      prose-p:text-ink-600 prose-p:leading-relaxed prose-p:mb-4
+      prose-a:text-brand prose-a:no-underline hover:prose-a:underline
+      prose-strong:text-ink
+      prose-ul:text-ink-600 prose-li:mb-1
+      prose-blockquote:border-l-brand prose-blockquote:text-ink-600
+    ">
+      <slot />
+    </div>
+
+    <!-- Back link + Internal CTA -->
+    <footer class="mt-16 pt-8 border-t border-ink-200">
+      <div class="bg-brand-50 rounded-2xl p-6 text-center border border-brand/20">
+        <h2 class="font-display font-bold text-xl text-ink mb-2">¿Necesitas mallas de seguridad en Barranquilla?</h2>
+        <p class="text-ink-600 text-sm mb-4">Somos especialistas en instalacion de mallas para balcones, ventanas y terrazas. Cotizacion gratis.</p>
+        <a href="/" class="btn-primary">Ver servicios y cotizar</a>
+      </div>
+      <div class="mt-6">
+        <a href="/blog" class="inline-flex items-center gap-2 text-sm text-ink-600 hover:text-brand transition-colors">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+          Volver al blog
+        </a>
+      </div>
+    </footer>
+  </article>
+</BaseLayout>

@@ -1,0 +1,73 @@
+---
+const reasons = [
+  {
+    number: '01',
+    title: 'Experiencia comprobada',
+    desc: 'Más de 5 años instalando mallas de seguridad en Barranquilla y el departamento del Atlántico. Conocemos cada tipo de estructura.',
+  },
+  {
+    number: '02',
+    title: 'Materiales de primera',
+    desc: 'Usamos polipropileno de alta densidad importado, tratado contra rayos UV, resistente a la humedad y al calor del Caribe.',
+  },
+  {
+    number: '03',
+    title: 'Cotización sin compromiso',
+    desc: 'Visitamos tu apartamento o casa, medimos y te entregamos un presupuesto exacto sin costo adicional. Sin letras pequeñas.',
+  },
+  {
+    number: '04',
+    title: 'Instalación el mismo día',
+    desc: 'Una vez aprobada la cotización, nuestro equipo puede instalar en menos de 24 horas para que vivas tranquilo cuanto antes.',
+  },
+  {
+    number: '05',
+    title: 'Discreción total',
+    desc: 'Las mallas se instalan sin perforar las paredes externas y son casi invisibles desde la calle. Tu edificio mantiene su estética.',
+  },
+  {
+    number: '06',
+    title: 'Servicio posventa real',
+    desc: 'No desaparecemos después de cobrar. Si tienes dudas o necesitas ajustes durante el periodo de garantía, respondemos.',
+  },
+];
+---
+
+<section class="py-20 md:py-28 bg-white" id="por-que-nosotros" aria-labelledby="why-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="grid lg:grid-cols-2 gap-16 items-start">
+      <!-- Left: heading -->
+      <div class="lg:sticky lg:top-24">
+        <span class="section-label aos">Por que elegirnos</span>
+        <h2 id="why-heading" class="section-title aos aos-delay-1">
+          La empresa de mallas<br />
+          de seguridad que<br />
+          <span class="text-brand-dark">más confían</span><br />
+          en Barranquilla
+        </h2>
+        <div class="divider aos aos-delay-2"></div>
+        <p class="section-subtitle aos aos-delay-2">
+          No somos un intermediario. Somos instaladores directos con equipo propio, materiales en stock y respuesta rápida en toda la ciudad.
+        </p>
+        <div class="mt-8 aos aos-delay-3">
+          <a href="/#contacto" class="btn-primary">
+            Pedir cotización gratis
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: reasons grid -->
+      <div class="grid sm:grid-cols-2 gap-5">
+        {reasons.map((r, i) => (
+          <div class={`aos aos-delay-${(i % 3) + 1} card`}>
+            <span class="text-3xl font-display font-bold text-brand-50/80 text-brand-dark/10 select-none">{r.number}</span>
+            <h3 class="mt-2 font-semibold text-ink text-base">{r.title}</h3>
+            <p class="mt-2 text-sm text-ink-600 leading-relaxed">{r.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

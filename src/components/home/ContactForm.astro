@@ -1,0 +1,210 @@
+---
+// GBP_PENDING — Replace embed URL when Google Business Profile is ready
+const mapEmbedUrl = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247372.80659956!2d-74.9447804!3d10.9684693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d42a8c8a375%3A0x514957ec1aaa5b!2sBarranquilla%2C+Atl%C3%A1ntico!5e0!3m2!1ses!2sco!4v1710000000000';
+---
+
+<section class="py-20 md:py-28 bg-ink-200/20" id="contacto" aria-labelledby="contact-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <span class="section-label aos">Contacto</span>
+      <h2 id="contact-heading" class="section-title aos aos-delay-1 mx-auto">
+        Solicita tu<br />
+        <span class="text-brand-dark">cotizacion gratis</span>
+      </h2>
+      <p class="section-subtitle aos aos-delay-2 mx-auto text-center">
+        Completa el formulario y te contactamos en menos de 2 horas. Sin compromiso.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12 items-start">
+
+      <!-- Form -->
+      <div class="aos">
+        <form
+          id="contact-form"
+          name="cotizacion"
+          class="bg-white rounded-3xl p-8 border border-ink-200/60 shadow-sm"
+          action="/gracias"
+          method="POST"
+          novalidate
+        >
+          <input type="hidden" name="form-name" value="cotizacion" />
+          <!-- Honeypot -->
+          <div class="hidden" aria-hidden="true">
+            <label>No llenar: <input name="bot-field" /></label>
+          </div>
+
+          <div class="space-y-5">
+            <!-- Name + Phone -->
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="nombre" class="block text-sm font-semibold text-ink mb-1.5">
+                  Nombre completo <span class="text-brand" aria-label="requerido">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  required
+                  autocomplete="name"
+                  placeholder="Tu nombre"
+                  class="w-full px-4 py-3 rounded-xl border border-ink-200 text-sm focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all"
+                />
+              </div>
+              <div>
+                <label for="telefono" class="block text-sm font-semibold text-ink mb-1.5">
+                  Telefono / WhatsApp <span class="text-brand" aria-label="requerido">*</span>
+                </label>
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                  required
+                  autocomplete="tel"
+                  placeholder="300 000 0000"
+                  class="w-full px-4 py-3 rounded-xl border border-ink-200 text-sm focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all"
+                />
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label for="email" class="block text-sm font-semibold text-ink mb-1.5">Correo electronico</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                placeholder="tu@correo.com"
+                class="w-full px-4 py-3 rounded-xl border border-ink-200 text-sm focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all"
+              />
+            </div>
+
+            <!-- Service type -->
+            <div>
+              <label for="servicio" class="block text-sm font-semibold text-ink mb-1.5">
+                Tipo de instalacion <span class="text-brand" aria-label="requerido">*</span>
+              </label>
+              <select
+                id="servicio"
+                name="servicio"
+                required
+                class="w-full px-4 py-3 rounded-xl border border-ink-200 text-sm text-ink-600 focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all bg-white"
+              >
+                <option value="" disabled selected>Selecciona una opcion</option>
+                <option value="balcon">Malla para balcon</option>
+                <option value="ventana">Malla para ventana</option>
+                <option value="terraza">Malla para terraza</option>
+                <option value="apartamento">Apartamento completo</option>
+                <option value="casa">Casa</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+
+            <!-- Address / Zone -->
+            <div>
+              <label for="zona" class="block text-sm font-semibold text-ink mb-1.5">Barrio o zona en Barranquilla</label>
+              <input
+                type="text"
+                id="zona"
+                name="zona"
+                placeholder="El Prado, Norte, Centro..."
+                class="w-full px-4 py-3 rounded-xl border border-ink-200 text-sm focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all"
+              />
+            </div>
+
+            <!-- Message -->
+            <div>
+              <label for="mensaje" class="block text-sm font-semibold text-ink mb-1.5">Detalles adicionales</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="3"
+                placeholder="Cuantos balcones, piso, tipo de estructura..."
+                class="w-full px-4 py-3 rounded-xl border border-ink-200 text-sm focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all resize-none"
+              ></textarea>
+            </div>
+
+            <!-- Privacy consent -->
+            <div class="flex items-start gap-3">
+              <input
+                type="checkbox"
+                id="privacidad"
+                name="privacidad"
+                required
+                class="mt-0.5 w-4 h-4 accent-brand rounded"
+              />
+              <label for="privacidad" class="text-xs text-ink-600 leading-relaxed">
+                Acepto la
+                <a href="/politica-privacidad" class="text-brand hover:underline">politica de privacidad</a>
+                y autorizo el tratamiento de mis datos personales para recibir la cotizacion.
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              class="btn-primary w-full justify-center text-base py-4"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Solicitar cotizacion gratis
+            </button>
+
+            <p class="text-xs text-center text-ink-400">
+              Te respondemos en menos de 2 horas. Sin compromiso.
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <!-- Map + Contact info -->
+      <div class="flex flex-col gap-6 aos aos-delay-2">
+        <!-- Map -->
+        <div class="rounded-3xl overflow-hidden border border-ink-200/60 shadow-sm h-72">
+          <iframe
+            src={mapEmbedUrl}
+            width="100%"
+            height="100%"
+            style="border:0"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicacion de Maprotec en Barranquilla"
+            class="w-full h-full"
+          ></iframe>
+        </div>
+
+        <!-- Contact details -->
+        <div class="bg-white rounded-3xl p-6 border border-ink-200/60 space-y-4">
+          <h3 class="font-display font-bold text-ink">Contacto directo</h3>
+          {[
+            { icon: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.08a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>`, label: 'Telefono', value: '[TELEFONO]', href: 'tel:[TELEFONO]' },
+            { icon: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>`, label: 'Email', value: 'info@maprotec.co', href: 'mailto:info@maprotec.co' },
+            { icon: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`, label: 'Horario', value: 'Lun–Vie 8am–6pm | Sab 8am–1pm', href: null },
+          ].map(c => (
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-brand-50 text-brand flex items-center justify-center flex-shrink-0" set:html={c.icon} />
+              <div>
+                <p class="text-xs text-ink-400 font-medium">{c.label}</p>
+                {c.href
+                  ? <a href={c.href} class="text-sm font-semibold text-ink hover:text-brand transition-colors">{c.value}</a>
+                  : <p class="text-sm font-semibold text-ink">{c.value}</p>
+                }
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- WhatsApp CTA -->
+        <a
+          href="https://wa.me/[WHATSAPP_NUM]?text=Hola%2C+quiero+una+cotizaci%C3%B3n+para+mallas+de+seguridad+en+Barranquilla"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-whatsapp w-full justify-center py-4 text-base"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.107 1.524 5.836L.051 23.625a.75.75 0 00.918.918l5.818-1.476A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+          Cotizar por WhatsApp ahora
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

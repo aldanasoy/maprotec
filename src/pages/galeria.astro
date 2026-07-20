@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const fotos = [
+  { src: '/images/galeria-1.jpg', alt: 'Malla de seguridad en balcon de apartamento Barranquilla' },
+  { src: '/images/galeria-2.jpg', alt: 'Red de seguridad para terraza en Barranquilla' },
+  { src: '/images/galeria-3.jpg', alt: 'Malla para ventana apartamento Barranquilla' },
+  { src: '/images/galeria-4.jpg', alt: 'Malla para gatos y mascotas Barranquilla' },
+  { src: '/images/galeria-5.jpg', alt: 'Proteccion para ninos balcon Barranquilla' },
+  { src: '/images/galeria-6.jpg', alt: 'Malla para balcon conjunto residencial Barranquilla' },
+  { src: '/images/galeria-7.jpg', alt: 'Instalacion de malla de seguridad terraza casa Barranquilla' },
+  { src: '/images/galeria-8.jpg', alt: 'Red de seguridad ventana panoramica Barranquilla' },
+  { src: '/images/galeria-9.jpg', alt: 'Malla balcon blanca transparente Barranquilla' },
+];
+---
+
+<BaseLayout
+  title="Galeria de instalaciones | Mallas de seguridad Barranquilla | Maprotec"
+  description="Conoce nuestros trabajos reales: mallas de seguridad instaladas en balcones, ventanas y terrazas de Barranquilla. Fotos antes y despues."
+  canonical="https://maprotec.co/galeria"
+>
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="section-label">Nuestros trabajos</span>
+        <h1 class="section-title mx-auto mt-2">
+          Galeria de instalaciones<br />
+          <span class="text-brand-dark">en Barranquilla</span>
+        </h1>
+        <p class="section-subtitle mx-auto mt-4 text-center">
+          Cada instalacion es unica. Aqui puedes ver algunos de nuestros trabajos recientes en apartamentos,
+          casas y conjuntos de Barranquilla y el Atlantico.
+        </p>
+      </div>
+
+      <div class="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+        {fotos.map((f, i) => (
+          <div class="break-inside-avoid rounded-2xl overflow-hidden group aos">
+            <img
+              src={f.src}
+              alt={f.alt}
+              class="w-full object-cover group-hover:scale-105 transition-transform duration-500 bg-brand-50"
+              loading="lazy"
+              decoding="async"
+              onerror="this.parentElement.style.background='#F0FDF4'; this.parentElement.style.minHeight='200px'; this.parentElement.style.display='flex'; this.parentElement.style.alignItems='center'; this.parentElement.style.justifyContent='center'; this.style.display='none';"
+            />
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-16 text-center">
+        <p class="text-ink-600 mb-6">¿Te gusta lo que ves? Solicita tu instalacion hoy.</p>
+        <a href="/#contacto" class="btn-primary">Cotizar ahora</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

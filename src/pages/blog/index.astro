@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
+);
+---
+
+<BaseLayout
+  title="Blog de mallas de seguridad | Maprotec Barranquilla"
+  description="Articulos y guias sobre mallas de seguridad para balcones, ventanas y mascotas en Barranquilla. Consejos de expertos para proteger tu hogar."
+  canonical="https://maprotec.co/blog"
+>
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <span class="section-label">Blog</span>
+        <h1 class="section-title mx-auto mt-2">
+          Guias y consejos sobre<br />
+          <span style="color:#1B3D2A">mallas de seguridad</span>
+        </h1>
+        <p class="section-subtitle mx-auto mt-4 text-center">
+          Todo lo que necesitas saber para proteger tu hogar en Barranquilla.
+        </p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem;">
+        {posts.map(post => (
+          <a href={`/blog/${post.id}`} class="card" style="display:flex;flex-direction:column;text-decoration:none;">
+            <div style="aspect-ratio:16/9;background:#F0FDF4;border-radius:0.75rem;margin-bottom:1rem;overflow:hidden;">
+              <img
+                src={post.data.image ?? '/og-default.jpg'}
+                alt={post.data.title}
+                style="width:100%;height:100%;object-fit:cover;"
+                loading="lazy"
+              />
+            </div>
+            <time style="font-size:0.75rem;color:#9CA3AF;">
+              {new Date(post.data.date).toLocaleDateString('es-CO', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </time>
+            <h2 style="font-family:Manrope,sans-serif;font-weight:700;font-size:1.1rem;color:#0A0A0A;margin:0.5rem 0 0.5rem;line-height:1.3;">
+              {post.data.title}
+            </h2>
+            <p style="font-size:0.875rem;color:#4B5563;line-height:1.6;flex:1;">{post.data.description}</p>
+            <span style="margin-top:1rem;font-size:0.875rem;font-weight:600;color:#059669;display:inline-flex;align-items:center;gap:0.25rem;">
+              Leer articulo →
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

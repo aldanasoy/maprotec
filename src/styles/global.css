@@ -1,0 +1,199 @@
+/* ── Maprotec — Global Styles ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
+@import "tailwindcss";
+
+/* ── Theme tokens ── */
+@theme {
+  --color-brand-dark:    #1B3D2A;
+  --color-brand:         #059669;
+  --color-brand-light:   #10B981;
+  --color-brand-bg:      #F0FDF4;
+  --color-brand-50:      #ECFDF5;
+
+  --color-ink:           #0A0A0A;
+  --color-ink-600:       #4B5563;
+  --color-ink-400:       #9CA3AF;
+  --color-ink-200:       #E5E7EB;
+
+  --font-sans:           "Inter", system-ui, sans-serif;
+  --font-display:        "Manrope", "Inter", sans-serif;
+
+  --animate-fade-up:     fadeUp 0.6s ease-out forwards;
+  --animate-fade-in:     fadeIn 0.5s ease-out forwards;
+  --animate-float:       float 6s ease-in-out infinite;
+  --animate-pulse-soft:  pulseSoft 3s ease-in-out infinite;
+}
+
+/* ── Keyframes ── */
+@keyframes fadeUp    { 0%{opacity:0;transform:translateY(24px)} 100%{opacity:1;transform:translateY(0)} }
+@keyframes fadeIn    { 0%{opacity:0} 100%{opacity:1} }
+@keyframes float     { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+@keyframes pulseSoft { 0%,100%{opacity:1} 50%{opacity:0.7} }
+
+/* ── Base ── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background: #ffffff;
+  color: #0A0A0A;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Manrope", "Inter", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+img { max-width: 100%; height: auto; }
+a   { transition: color 0.2s; }
+
+/* ── Reusable component classes ── */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #059669;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: "Manrope", "Inter", sans-serif;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: #0A0A0A;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #4B5563;
+  line-height: 1.7;
+  max-width: 40rem;
+}
+
+.divider {
+  width: 3rem;
+  height: 4px;
+  background: #059669;
+  border-radius: 9999px;
+  margin: 1.25rem 0;
+}
+
+/* CTA Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #1B3D2A;
+  color: #ffffff;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+.btn-primary:hover { background: #059669; box-shadow: 0 4px 12px rgba(5,150,105,0.25); }
+.btn-primary:active { transform: scale(0.97); }
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  color: #0A0A0A;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  border: 1.5px solid #E5E7EB;
+  transition: border-color 0.2s, color 0.2s, transform 0.1s;
+}
+.btn-secondary:hover { border-color: #059669; color: #059669; }
+.btn-secondary:active { transform: scale(0.97); }
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #25D366;
+  color: #ffffff;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+.btn-whatsapp:hover { background: #1ebe5c; box-shadow: 0 4px 12px rgba(37,211,102,0.3); }
+.btn-whatsapp:active { transform: scale(0.97); }
+
+/* Card */
+.card {
+  background: #ffffff;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.card:hover { border-color: rgba(5,150,105,0.3); box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+
+/* Pill */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: #ECFDF5;
+  color: #1B3D2A;
+}
+
+/* Animate on scroll */
+.aos {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.aos.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.aos-delay-1 { transition-delay: 0.10s; }
+.aos-delay-2 { transition-delay: 0.20s; }
+.aos-delay-3 { transition-delay: 0.30s; }
+.aos-delay-4 { transition-delay: 0.40s; }
+.aos-delay-5 { transition-delay: 0.50s; }
+
+/* FAQ */
+details summary { list-style: none; cursor: pointer; }
+details summary::-webkit-details-marker { display: none; }
+details[open] .faq-icon { transform: rotate(45deg); }
+.faq-icon { transition: transform 0.25s ease; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #f1f5f1; }
+::-webkit-scrollbar-thumb { background: #059669; border-radius: 3px; }
+
+/* Focus */
+:focus-visible { outline: 2px solid #059669; outline-offset: 3px; }

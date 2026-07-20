@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://maprotec.co/sitemap-index.xml

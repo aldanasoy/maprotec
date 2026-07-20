@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Nosotros | Maprotec — Empresa de mallas de seguridad en Barranquilla"
+  description="Conoce el equipo de Maprotec. Empresa especializada en instalacion de mallas de seguridad para balcones y ventanas en Barranquilla con mas de 5 anos de experiencia."
+  canonical="https://maprotec.co/nosotros"
+>
+  <!-- Hero -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <span class="section-label">Nosotros</span>
+      <h1 class="section-title mx-auto mt-2">
+        La empresa de mallas<br />
+        <span class="text-brand-dark">mas confiable</span> de Barranquilla
+      </h1>
+    </div>
+  </section>
+
+  <!-- Story -->
+  <section class="py-12 bg-ink-200/20">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="font-display font-bold text-3xl text-ink mb-4">Nuestra historia</h2>
+          <div class="divider"></div>
+          <div class="space-y-4 text-ink-600 leading-relaxed">
+            <p>Maprotec nacio en Barranquilla de una necesidad real: las familias de la ciudad no encontraban empresas de confianza para instalar mallas de seguridad con materiales de calidad y a buen precio.</p>
+            <p>Desde entonces hemos instalado mallas en mas de <strong class="text-ink">150 hogares</strong> en Barranquilla y el departamento del Atlantico, protegiendo a ninos, mascotas y adultos mayores.</p>
+            <p>Trabajamos con polipropileno de alta densidad importado, tratado contra rayos UV — el mismo material que se usa en instalaciones de alta exigencia — porque creemos que tu seguridad no debe ser un lujo.</p>
+          </div>
+        </div>
+        <div class="rounded-3xl overflow-hidden aspect-square bg-brand-50 flex items-center justify-center">
+          <img src="/images/equipo-maprotec.jpg" alt="Equipo de Maprotec instalando malla de seguridad en Barranquilla" class="w-full h-full object-cover" loading="lazy"
+            onerror="this.style.display='none'; this.parentElement.classList.add('text-brand'); this.parentElement.innerHTML='<svg width=80 height=80 viewBox=\'0 0 24 24\' fill=none stroke=currentColor stroke-width=1.5><path d=\'M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2\'/><circle cx=9 cy=7 r=4/><path d=\'M23 21v-2a4 4 0 00-3-3.87\'/><path d=\'M16 3.13a4 4 0 010 7.75\'/></svg>'"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-display font-bold text-3xl text-ink mb-10 text-center">Nuestros valores</h2>
+      <div class="grid sm:grid-cols-3 gap-6">
+        {[
+          { title: 'Honestidad', desc: 'Precios claros desde el inicio. Sin letras pequenas, sin cobros sorpresa.' },
+          { title: 'Calidad', desc: 'Materiales de primera. Instalaciones que duran anos, no meses.' },
+          { title: 'Respeto', desc: 'Tu hogar es sagrado. Trabajamos con cuidado y dejamos todo limpio.' },
+        ].map(v => (
+          <div class="card text-center">
+            <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="font-semibold text-ink mb-2">{v.title}</h3>
+            <p class="text-sm text-ink-600">{v.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-brand-dark text-white">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+      <h2 class="font-display font-bold text-3xl mb-4">Protege tu hogar hoy</h2>
+      <p class="text-white/80 mb-8">Mallas de seguridad instaladas por expertos en Barranquilla. Cotizacion gratuita, respuesta rapida.</p>
+      <a href="/#contacto" class="inline-flex items-center gap-2 bg-white text-brand-dark font-semibold px-8 py-4 rounded-xl hover:bg-brand-50 transition-all">
+        Solicitar cotizacion gratis
+      </a>
+    </div>
+  </section>
+</BaseLayout>

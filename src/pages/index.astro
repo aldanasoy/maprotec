@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/home/Hero.astro';
+import Benefits from '../components/home/Benefits.astro';
+import WhyUs from '../components/home/WhyUs.astro';
+import InstallTypes from '../components/home/InstallTypes.astro';
+import Process from '../components/home/Process.astro';
+import Gallery from '../components/home/Gallery.astro';
+import Testimonials from '../components/home/Testimonials.astro';
+import FAQ, { faqItems } from '../components/home/FAQ.astro';
+import ContactForm from '../components/home/ContactForm.astro';
+
+const siteUrl = 'https://maprotec.co';
+
+// FAQ Schema
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(item => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": { "@type": "Answer", "text": item.a }
+  }))
+};
+
+// BreadcrumbList
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": siteUrl }
+  ]
+};
+
+// Service Schema
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Instalacion de mallas de seguridad en Barranquilla",
+  "description": "Servicio profesional de instalacion de mallas de seguridad para balcones, ventanas y terrazas en Barranquilla, Colombia.",
+  "provider": { "@type": "LocalBusiness", "name": "Maprotec", "url": siteUrl },
+  "areaServed": { "@type": "City", "name": "Barranquilla" },
+  "serviceType": "Instalacion de mallas de seguridad",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "COP",
+    "priceRange": "200000-600000",
+    "availability": "https://schema.org/InStock",
+    "areaServed": "Barranquilla, Colombia"
+  }
+};
+---
+
+<BaseLayout
+  title="Mallas para Balcones en Barranquilla | Maprotec — Instalacion Profesional"
+  description="Instala mallas de seguridad para balcones, ventanas y terrazas en Barranquilla. Protege a ninos y mascotas. Material anti-UV. Garantia 1 ano. Cotizacion gratis."
+  schema={[faqSchema, breadcrumbSchema, serviceSchema]}
+>
+  <Hero />
+  <Benefits />
+  <WhyUs />
+  <InstallTypes />
+  <Process />
+  <Gallery />
+  <Testimonials />
+  <FAQ />
+  <ContactForm />
+</BaseLayout>

@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://maprotec.co" },
+    { "@type": "ListItem", "position": 2, "name": "Precios", "item": "https://maprotec.co/precios" }
+  ]
+};
+
+const precios = [
+  { tipo: 'Balcon pequeno (hasta 2m)', desde: '200.000', hasta: '350.000', tiempo: '1–2 hrs', popular: false },
+  { tipo: 'Balcon mediano (2–4m)', desde: '300.000', hasta: '500.000', tiempo: '2–3 hrs', popular: true },
+  { tipo: 'Balcon grande / terraza', desde: '450.000', hasta: '900.000', tiempo: '3–5 hrs', popular: false },
+  { tipo: 'Ventana estandar', desde: '150.000', hasta: '280.000', tiempo: '45–90 min', popular: false },
+  { tipo: 'Apartamento completo', desde: '600.000', hasta: '1.200.000', tiempo: '1 dia', popular: false },
+  { tipo: 'Casa 2 pisos', desde: '900.000', hasta: '2.000.000', tiempo: '1–2 dias', popular: false },
+];
+---
+
+<BaseLayout
+  title="Precios de mallas de seguridad en Barranquilla | Maprotec"
+  description="Consulta los precios de instalacion de mallas para balcones y ventanas en Barranquilla. Cotizacion gratuita sin compromiso. Materiales de primera calidad."
+  canonical="https://maprotec.co/precios"
+  schema={schema}
+>
+  <!-- Hero Precios -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <span class="section-label">Precios</span>
+      <h1 class="section-title mx-auto mt-2">
+        Precios de mallas de seguridad<br />
+        <span class="text-brand-dark">en Barranquilla</span>
+      </h1>
+      <p class="section-subtitle mx-auto mt-4 text-center">
+        Los siguientes precios son referenciales. El precio exacto depende del area,
+        tipo de estructura y complejidad. Solicita tu cotizacion gratuita.
+      </p>
+    </div>
+  </section>
+
+  <!-- Precios table -->
+  <section class="py-16 bg-ink-200/20">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="space-y-4">
+        {precios.map(p => (
+          <div class={`relative bg-white rounded-2xl p-6 border transition-all ${p.popular ? 'border-brand shadow-lg' : 'border-ink-200/60'}`}>
+            {p.popular && (
+              <span class="absolute -top-3 left-6 bg-brand-dark text-white text-xs font-semibold px-3 py-1 rounded-full">
+                Mas solicitado
+              </span>
+            )}
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <h2 class="font-semibold text-ink">{p.tipo}</h2>
+                <p class="text-xs text-ink-400 mt-1">Tiempo de instalacion: {p.tiempo}</p>
+              </div>
+              <div class="text-right">
+                <p class="text-sm text-ink-400">Desde</p>
+                <p class="font-display font-bold text-2xl text-brand-dark">${p.desde} <span class="text-sm font-normal text-ink-400">COP</span></p>
+                <p class="text-xs text-ink-400">hasta ~${p.hasta} COP</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-12 bg-brand-50 rounded-3xl p-8 text-center border border-brand/20">
+        <h2 class="font-display font-bold text-2xl text-ink mb-3">¿Quieres un precio exacto?</h2>
+        <p class="text-ink-600 mb-6">Hacemos una visita tecnica sin costo y te damos el presupuesto exacto al centavo.</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contacto" class="btn-primary">Solicitar visita gratis</a>
+          <a href="https://wa.me/[WHATSAPP_NUM]" target="_blank" rel="noopener" class="btn-whatsapp">
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
