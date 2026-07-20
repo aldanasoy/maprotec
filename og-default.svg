@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#1B3D2A"/>
+  <rect x="40" y="40" width="1120" height="550" rx="20" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+  <text x="100" y="200" font-family="system-ui,sans-serif" font-size="80" font-weight="800" fill="white">Maprotec</text>
+  <text x="100" y="290" font-family="system-ui,sans-serif" font-size="40" fill="rgba(255,255,255,0.8)">Mallas de seguridad para balcones</text>
+  <text x="100" y="350" font-family="system-ui,sans-serif" font-size="36" fill="rgba(255,255,255,0.7)">en Barranquilla</text>
+  <text x="100" y="480" font-family="system-ui,sans-serif" font-size="28" fill="#10B981">maprotec.co</text>
+</svg>

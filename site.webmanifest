@@ -1,0 +1,12 @@
+{
+  "name": "Maprotec — Mallas de seguridad Barranquilla",
+  "short_name": "Maprotec",
+  "description": "Instalacion de mallas de seguridad para balcones y ventanas en Barranquilla",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1B3D2A",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
