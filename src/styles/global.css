@@ -129,6 +129,12 @@ a   { transition: color 0.2s; }
 .btn-secondary:hover { border-color: #059669; color: #059669; }
 .btn-secondary:active { transform: scale(0.97); }
 
+.btn-secondary {
+  @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm
+         border-2 border-brand text-brand-dark hover:bg-brand hover:text-white
+         transition-all duration-200 cursor-pointer;
+}
+
 .btn-whatsapp {
   display: inline-flex;
   align-items: center;

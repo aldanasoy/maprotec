@@ -1,10 +1,9 @@
 ---
-const whatsappNum = '[WHATSAPP_NUM]';
-const waMsg = encodeURIComponent('Hola, necesito cotización para mallas de seguridad en Barranquilla.');
+// Hero — Keyword principal: "Mallas para Balcones en Barranquilla"
+// CTA abre modal de captacion de leads
 ---
-
 <section
-  class="relative min-h-[90vh] flex items-center overflow-hidden bg-white"
+  class="relative min-h-[92vh] flex items-center overflow-hidden bg-white"
   aria-labelledby="hero-heading"
 >
   <!-- Background accent -->
@@ -12,110 +11,143 @@ const waMsg = encodeURIComponent('Hola, necesito cotización para mallas de segu
     <div class="absolute top-0 right-0 w-1/2 h-full bg-brand-50/60"></div>
     <div class="absolute top-20 right-10 w-72 h-72 bg-brand/8 rounded-full blur-3xl"></div>
     <div class="absolute bottom-20 left-10 w-48 h-48 bg-brand-dark/5 rounded-full blur-2xl"></div>
+    <!-- Subtle mesh pattern overlay -->
+    <div class="absolute inset-0 opacity-[0.02]" style="background-image:repeating-linear-gradient(0deg,#000 0,#000 1px,transparent 1px,transparent 20px),repeating-linear-gradient(90deg,#000 0,#000 1px,transparent 1px,transparent 20px)"></div>
   </div>
 
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 w-full">
     <div class="grid lg:grid-cols-2 gap-12 items-center">
 
-      <!-- Copy -->
+      <!-- ── Copy ── -->
       <div>
+        <!-- Pill badge -->
         <div class="pill mb-6 aos">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          Instalación profesional en Barranquilla
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2.5" stroke-linecap="round">
+            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+          Instalacion profesional en Barranquilla
         </div>
 
+        <!-- H1 — keyword exacto -->
         <h1
           id="hero-heading"
-          class="aos aos-delay-1 font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-ink leading-[1.08] tracking-tight"
+          class="aos aos-delay-1 font-display text-4xl sm:text-5xl lg:text-[3.4rem] font-bold
+                 text-ink leading-[1.06] tracking-tight"
         >
-          Mallas para<br />
-          <span class="text-brand-dark">Balcones</span> en<br />
+          Mallas para<br>
+          <span class="text-brand-dark">Balcones</span> en<br>
           Barranquilla
         </h1>
 
         <p class="aos aos-delay-2 mt-6 text-lg md:text-xl text-ink-600 leading-relaxed max-w-md">
           Protege a tus hijos y mascotas con mallas de seguridad de alta resistencia.
-          Instalación certificada, materiales UV, <strong class="text-ink font-semibold">garantía incluida</strong>.
+          Instalacion certificada, material anti-UV,
+          <strong class="text-ink font-semibold">garantia incluida</strong>.
         </p>
 
-        <!-- Trust signals inline -->
+        <!-- Trust signals -->
         <ul class="aos aos-delay-3 mt-6 flex flex-wrap gap-3" aria-label="Beneficios clave">
-          {['Garantía 1 año', 'Material anti-UV', 'Instalación en 24h'].map(item => (
+          {[
+            'Garantia 1 ano',
+            'Material anti-UV',
+            'Instalacion en 24h',
+            'Sin perforar fachadas',
+          ].map(b => (
             <li class="flex items-center gap-1.5 text-sm text-ink-600">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              {item}
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a"
+                   stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              {b}
             </li>
           ))}
         </ul>
 
         <!-- CTAs -->
         <div class="aos aos-delay-4 mt-10 flex flex-wrap gap-4">
-          <a href="/#contacto" class="btn-primary">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.08a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-            Solicitar cotización
-          </a>
-          <a href={`https://wa.me/${whatsappNum}?text=${waMsg}`} target="_blank" rel="noopener" class="btn-whatsapp">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.107 1.524 5.836L.051 23.625a.75.75 0 00.918.918l5.818-1.476A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+          <button
+            data-open-lead-modal
+            class="btn-primary cursor-pointer"
+            aria-label="Abrir formulario de cotizacion"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.08a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            Solicitar cotizacion
+          </button>
+          <a
+            href="https://wa.me/[WHATSAPP_NUM]?text=Hola%2C%20quiero%20cotizaci%C3%B3n%20para%20mallas%20en%20Barranquilla."
+            target="_blank"
+            rel="noopener"
+            class="btn-whatsapp"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.107 1.524 5.836L.051 23.625a.75.75 0 00.918.918l5.818-1.476A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
+            </svg>
             WhatsApp
           </a>
         </div>
 
-        <!-- Social proof mini -->
+        <!-- Social proof -->
         <div class="aos aos-delay-5 mt-10 flex items-center gap-3 text-sm text-ink-600">
           <div class="flex -space-x-2" aria-hidden="true">
-            {['bg-brand-dark','bg-brand','bg-brand-light'].map(c => (
-              <div class={`w-8 h-8 ${c} rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-bold`}>M</div>
+            {['M','M','M'].map((l,i) => (
+              <div class:list={[
+                'w-8 h-8 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-bold',
+                i === 0 ? 'bg-brand-dark' : i === 1 ? 'bg-brand' : 'bg-brand-light'
+              ]}>{l}</div>
             ))}
           </div>
           <span><strong class="text-ink">+150 familias</strong> protegidas en Barranquilla</span>
         </div>
       </div>
 
-      <!-- Hero image / visual -->
+      <!-- ── Hero Image ── -->
       <div class="relative aos aos-delay-2">
-        <!-- Main image placeholder -->
-        <div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] bg-brand-50 flex items-center justify-center">
-          <!-- Replace with actual installation photo -->
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] bg-brand-50">
           <img
             src="/images/hero-malla-balcon.jpg"
-            alt="Instalación de malla de seguridad en balcón en Barranquilla"
+            alt="Instalacion de malla de seguridad en balcon de apartamento en Barranquilla Colombia"
             class="w-full h-full object-cover"
             width="600"
             height="750"
             loading="eager"
             decoding="async"
-            onerror="this.parentElement.innerHTML='<div class='flex flex-col items-center justify-center h-full gap-4 text-brand-dark'><svg width='80' height='80' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5'><rect x='3' y='3' width='18' height='18' rx='2'/><path d='M9 9h6v6H9z'/><path d='M3 9h18M9 3v18'/></svg><p class='text-brand text-sm font-medium'>Foto de instalación</p></div>'"
           />
+          <!-- Overlay gradient for text readability -->
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/30 via-transparent to-transparent"></div>
 
-          <!-- Badge overlay -->
-          <div class="absolute top-4 left-4 bg-white rounded-xl px-3 py-2 shadow-md flex items-center gap-2 text-sm">
-            <div class="w-2 h-2 bg-brand rounded-full animate-pulse-soft"></div>
-            <span class="font-semibold text-ink">Instalación disponible hoy</span>
+          <!-- Badge: instalacion disponible -->
+          <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl px-3 py-2
+                      shadow-md flex items-center gap-2 text-sm">
+            <div class="w-2 h-2 bg-brand rounded-full animate-pulse" aria-hidden="true"></div>
+            <span class="font-semibold text-ink">Instalacion disponible hoy</span>
           </div>
 
-          <!-- Bottom badge -->
-          <div class="absolute bottom-4 right-4 bg-brand-dark text-white rounded-xl px-3 py-2 shadow-md text-sm font-semibold">
+          <!-- Badge: material -->
+          <div class="absolute bottom-4 right-4 bg-brand-dark text-white rounded-xl px-3 py-2
+                      shadow-md text-sm font-semibold">
             Material UV resistente
           </div>
         </div>
 
-        <!-- Floating card -->
-        <div class="absolute -left-6 top-1/2 -translate-y-1/2 bg-white rounded-2xl p-4 shadow-xl border border-ink-200/60 max-w-[160px] animate-float hidden lg:block">
-          <div class="flex items-center gap-2 mb-1">
-            {[1,2,3,4,5].map(() => (
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <!-- Floating testimonial card -->
+        <div class="absolute -left-6 top-1/2 -translate-y-1/2 bg-white rounded-2xl p-4 shadow-xl
+                    border border-ink-200/60 max-w-[160px] animate-float hidden lg:block">
+          <div class="flex items-center gap-1 mb-1">
+            {[0,0,0,0,0].map(() => (
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
             ))}
           </div>
-          <p class="text-xs font-semibold text-ink">Excelente trabajo</p>
-          <p class="text-xs text-ink-600 mt-0.5">— María García</p>
+          <p class="text-xs text-ink font-medium leading-tight">"Instalacion impecable, muy profesionales"</p>
+          <p class="text-[10px] text-ink-400 mt-1">Maria T. — El Prado</p>
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- Scroll indicator -->
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-ink-400 text-xs no-print" aria-hidden="true">
-    <span>Conoce más</span>
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="animate-bounce"><polyline points="6 9 12 15 18 9"/></svg>
   </div>
 </section>
