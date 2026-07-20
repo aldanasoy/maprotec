@@ -2,7 +2,7 @@
 title: "Proteccion de ninos en balcones y ventanas de apartamentos: lo que debes saber"
 description: "Guia para padres sobre como proteger a los ninos de caidas en balcones y ventanas. Normas de seguridad, opciones de proteccion y recomendaciones practicas."
 date: "2024-04-18"
-author: "Maprotec"
+author: "Mayprotec"
 image: "/images/blog-ninos-balcon.jpg"
 tags: ["ninos", "seguridad", "prevencion"]
 ---
@@ -57,6 +57,6 @@ Solo utiles si el problema es la altura de la baranda existente.
 
 ---
 
-En Maprotec instalamos mallas de seguridad disenadas especificamente para proteger a ninos en balcones y ventanas de apartamentos en Barranquilla. Materiales suaves, apertura pequena y sistemas de anclaje certificados.
+En Mayprotec instalamos mallas de seguridad disenadas especificamente para proteger a ninos en balcones y ventanas de apartamentos en Barranquilla. Materiales suaves, apertura pequena y sistemas de anclaje certificados.
 
 **[Solicita una cotizacion gratuita](/)** — visitamos tu hogar y te recomendamos la mejor solucion para tu caso especifico.

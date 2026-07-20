@@ -2,7 +2,7 @@
 title: "Como elegir la malla de seguridad correcta para tu balcon"
 description: "Guia practica para entender los diferentes tipos de mallas de seguridad, materiales y sistemas de instalacion. Todo lo que necesitas saber antes de comprar."
 date: "2024-03-15"
-author: "Maprotec"
+author: "Mayprotec"
 image: "/images/blog-elegir-malla.jpg"
 tags: ["guia", "materiales", "mallas"]
 ---
@@ -58,4 +58,4 @@ Aunque existen kits para instalar mallas por tu cuenta, recomendamos siempre con
 
 ---
 
-Si estas en Barranquilla y quieres asesorarte sobre que tipo de malla es mejor para tu balcon, ventana o terraza, **[contacta a Maprotec](/)** para una visita tecnica gratuita. Evaluamos tu espacio y te recomendamos la solucion mas adecuada.
+Si estas en Barranquilla y quieres asesorarte sobre que tipo de malla es mejor para tu balcon, ventana o terraza, **[contacta a Mayprotec](/)** para una visita tecnica gratuita. Evaluamos tu espacio y te recomendamos la solucion mas adecuada.

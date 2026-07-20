@@ -22,7 +22,7 @@ Reemplazar estos archivos con fotos reales de instalaciones:
 - `blog-ninos-balcon.jpg`
 
 ## Equipo
-- `equipo-maprotec.jpg`
+- `equipo-mayprotec.jpg`
 
 ## Notas
 - Formato: JPEG o WebP

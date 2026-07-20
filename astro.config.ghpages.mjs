@@ -3,8 +3,8 @@ import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: 'https://mallas-barranquilla.com',
-  // base: '/mayprotec',  // Uncomment ONLY for GitHub Pages preview. Remove for Cloudflare Pages with custom domain.
+  site: 'https://aldanasoy.github.io',
+  base: '/mayprotec',
   output: 'static',
   integrations: [sitemap()],
   build: { assets: '_assets' },

@@ -14,12 +14,12 @@ const {
   title,
   description,
   date,
-  author = 'Maprotec',
+  author = 'Mayprotec',
   image = '/og-default.jpg',
   slug,
 } = Astro.props;
 
-const canonical = `https://maprotec.co/blog/${slug}`;
+const canonical = `https://mallas-barranquilla.com/blog/${slug}`;
 const dateISO   = new Date(date).toISOString();
 const dateFmt   = new Date(date).toLocaleDateString('es-CO', { year: 'numeric', month: 'long', day: 'numeric' });
 
@@ -30,9 +30,9 @@ const articleSchema = {
   "description": description,
   "datePublished": dateISO,
   "dateModified": dateISO,
-  "author": { "@type": "Organization", "name": "Maprotec", "url": "https://maprotec.co" },
-  "publisher": { "@type": "Organization", "name": "Maprotec", "logo": { "@type": "ImageObject", "url": "https://maprotec.co/logo.svg" } },
-  "image": `https://maprotec.co${image}`,
+  "author": { "@type": "Organization", "name": "Mayprotec", "url": "https://mallas-barranquilla.com" },
+  "publisher": { "@type": "Organization", "name": "Mayprotec", "logo": { "@type": "ImageObject", "url": "https://mallas-barranquilla.com/logo.svg" } },
+  "image": `https://mallas-barranquilla.com${image}`,
   "mainEntityOfPage": { "@type": "WebPage", "@id": canonical },
 };
 
@@ -40,15 +40,15 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://maprotec.co" },
-    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://maprotec.co/blog" },
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://mallas-barranquilla.com" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mallas-barranquilla.com/blog" },
     { "@type": "ListItem", "position": 3, "name": title, "item": canonical },
   ]
 };
 ---
 
 <BaseLayout
-  title={`${title} | Blog Maprotec`}
+  title={`${title} | Blog Mayprotec`}
   description={description}
   canonical={canonical}
   ogImage={image}

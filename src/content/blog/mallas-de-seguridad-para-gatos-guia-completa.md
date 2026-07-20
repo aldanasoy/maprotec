@@ -2,7 +2,7 @@
 title: "Mallas de seguridad para gatos: guia completa para duenos responsables"
 description: "Todo lo que necesitas saber sobre mallas de seguridad para gatos: tipos, materiales, tamano de apertura y consejos para una instalacion exitosa."
 date: "2024-04-02"
-author: "Maprotec"
+author: "Mayprotec"
 image: "/images/blog-mallas-gatos.jpg"
 tags: ["mascotas", "gatos", "seguridad"]
 ---
@@ -55,4 +55,4 @@ Una malla de polipropileno correctamente instalada dura entre 5 y 10 anos si se 
 
 ---
 
-¿Tienes gatos y vives en un apartamento en Barranquilla? **[Contacta a Maprotec](/)** para una cotizacion sin compromiso. Instalamos mallas especificamente disenadas para mascotas con materiales de alta resistencia y garantia de un ano.
+¿Tienes gatos y vives en un apartamento en Barranquilla? **[Contacta a Mayprotec](/)** para una cotizacion sin compromiso. Instalamos mallas especificamente disenadas para mascotas con materiales de alta resistencia y garantia de un ano.
