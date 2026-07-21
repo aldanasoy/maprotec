@@ -1,62 +1,64 @@
 ---
-title: "Proteccion de ninos en balcones y ventanas de apartamentos: lo que debes saber"
-description: "Guia para padres sobre como proteger a los ninos de caidas en balcones y ventanas. Normas de seguridad, opciones de proteccion y recomendaciones practicas."
-date: "2024-04-18"
+title: "Protección de niños en balcones y ventanas de apartamentos: lo que debes saber"
+description: "Guía para padres sobre cómo proteger a los niños de caídas en balcones y ventanas. Normas de seguridad, opciones de protección y recomendaciones prácticas."
+date: "2026-07-21"
 author: "Mayprotec"
 image: "/images/blog-ninos-balcon.jpg"
-tags: ["ninos", "seguridad", "prevencion"]
+tags: ["niños", "seguridad", "prevención"]
 ---
 
-Para los padres que viven en apartamentos con balcones o ventanas altas, la seguridad de sus hijos es una preocupacion constante. Los ninos entre 1 y 5 anos son especialmente vulnerables porque aun no tienen conciencia del peligro, tienen gran curiosidad y son capaces de trepar superficies que los adultos no esperan.
+Protección de niños en balcones y ventanas de apartamentos: lo que debes saber
 
-En esta guia te explicamos que dice la norma en Colombia, que opciones de proteccion existen y como evaluar cual es la mejor para tu hogar.
+Para los padres que viven en apartamentos con balcones o ventanas altas, la seguridad de sus hijos es una preocupación constante. Los niños entre 1 y 5 años son especialmente vulnerables porque aún no tienen conciencia del peligro, tienen gran curiosidad y son capaces de trepar superficies que los adultos no esperan.
+
+En esta guía te explicamos qué dice la norma en Colombia, qué opciones de protección existen y cómo evaluar cuál es la mejor para tu hogar.
 
 ## El riesgo real: datos que todo padre debe conocer
 
-Las caidas desde balcones y ventanas son una de las principales causas de accidentes graves en ninos menores de 5 anos. En muchos casos ocurren en fracciones de segundo, cuando el adulto se distrae brevemente.
+Las caídas desde balcones y ventanas son una de las principales causas de accidentes graves en niños menores de 5 años. En muchos casos ocurren en fracciones de segundo, cuando el adulto se distrae brevemente.
 
-Los factores de riesgo mas comunes son:
+Los factores de riesgo más comunes son:
 
-- **Muebles cerca del balcon:** sillas, mesas y cajas que permiten a los ninos trepar
-- **Barandas con barrotes horizontales:** los ninos los usan como escalera
+- **Muebles cerca del balcón:** sillas, mesas y cajas que permiten a los niños trepar
+- **Barandas con barrotes horizontales:** los niños los usan como escalera
 - **Ventanas que abren hacia afuera** sin tope o seguro
-- **Espacios entre barrotes mayores a 10 cm:** un nino puede pasarse
+- **Espacios entre barrotes mayores a 10 cm:** un niño puede pasarse
 
 ## Normativa en Colombia
 
-El Reglamento Colombiano de Construccion Sismo Resistente (NSR-10) establece que las barandas de balcones deben tener una altura minima de **90 cm** (en edificios residenciales de mas de 3 pisos) y que el espacio entre barrotes no debe superar **10 cm**.
+El Reglamento Colombiano de Construcción Sismo Resistente (NSR-10) establece que las barandas de balcones deben tener una altura mínima de **90 cm** (en edificios residenciales de más de 3 pisos) y que el espacio entre barrotes no debe superar **10 cm**.
 
-Sin embargo, muchos edificios construidos antes del 2010 no cumplen con estas medidas actualizadas. Las mallas de seguridad son una solucion practica para complementar barandas que no cumplen los estandares actuales.
+Sin embargo, muchos edificios construidos antes del 2010 no cumplen con estas medidas actualizadas. Las mallas de seguridad son una solución práctica para complementar barandas que no cumplen los estándares actuales.
 
-## Opciones de proteccion para balcones con ninos
+## Opciones de protección para balcones con niños
 
 ### Mallas de seguridad (recomendada)
 
-Es la opcion mas efectiva y estetica. Una malla bien instalada cubre todos los espacios por los que un nino podria pasar o caer, sin alterar la visual desde el interior.
+Es la opción más efectiva y estética. Una malla bien instalada cubre todos los espacios por los que un niño podría pasar o caer, sin alterar la visual desde el interior.
 
 **Ventajas:**
-- Cubre toda la abertura del balcon
-- No puede ser removida facilmente por un nino
+- Cubre toda la abertura del balcón
+- No puede ser removida fácilmente por un niño
 - Materiales suaves que no lastiman
 - Casi invisible desde la calle
 
 ### Paneles de vidrio o policarbonato
 
-Mas costosos y permanentes. Buenos para terrazas de casas pero mas complejos en apartamentos.
+Más costosos y permanentes. Buenos para terrazas de casas pero más complejos en apartamentos.
 
 ### Barandas adicionales o extensiones
 
-Solo utiles si el problema es la altura de la baranda existente.
+Solo útiles si el problema es la altura de la baranda existente.
 
-## Recomendaciones practicas para el hogar
+## Recomendaciones prácticas para el hogar
 
-- Nunca dejes muebles cerca del balcon que puedan servir de escalera
+- Nunca dejes muebles cerca del balcón que puedan servir de escalera
 - Si tu baranda tiene barrotes horizontales, cubre la parte inferior con un panel
 - Usa seguros en las ventanas que abren hacia afuera
-- Explica a los ninos desde pequenos el peligro del balcon — aunque esto no reemplaza las barreras fisicas
+- Explica a los niños desde pequeños el peligro del balcón — aunque esto no reemplaza las barreras físicas
 
 ---
 
-En Mayprotec instalamos mallas de seguridad disenadas especificamente para proteger a ninos en balcones y ventanas de apartamentos en Barranquilla. Materiales suaves, apertura pequena y sistemas de anclaje certificados.
+En Mayprotec instalamos mallas de seguridad diseñadas específicamente para proteger a niños en balcones y ventanas de apartamentos en Barranquilla. Materiales suaves, apertura pequeña y sistemas de anclaje certificados.
 
-**[Solicita una cotizacion gratuita](/)** — visitamos tu hogar y te recomendamos la mejor solucion para tu caso especifico.
+**[Solicita una cotización gratuita](/)** — visitamos tu hogar y te recomendamos la mejor solución para tu caso específico.

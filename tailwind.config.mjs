@@ -3,21 +3,6 @@ export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
-      colors: {
-        brand: {
-          dark:    '#1B3D2A',
-          DEFAULT: '#059669',
-          light:   '#10B981',
-          bg:      '#F0FDF4',
-          50:      '#ECFDF5',
-        },
-        ink: {
-          DEFAULT: '#0A0A0A',
-          600:     '#4B5563',
-          400:     '#9CA3AF',
-          200:     '#E5E7EB',
-        },
-      },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         display: ['Manrope', 'Inter', 'sans-serif'],
@@ -52,4 +37,5 @@ export default {
     },
   },
   plugins: [],
+  // Tailwind v4 custom colors via theme.extend is not needed - define in CSS
 };
