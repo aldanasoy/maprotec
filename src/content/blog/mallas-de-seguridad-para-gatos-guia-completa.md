@@ -7,17 +7,21 @@ image: "/images/blog-mallas-gatos.jpg"
 tags: ["mascotas", "gatos", "seguridad"]
 ---
 
-Mallas de seguridad para gatos: guía completa para dueños responsables
+## Mallas de seguridad para gatos: guía completa para dueños responsables
 
 Los gatos son curiosos por naturaleza. Esa curiosidad que los hace adorables también los pone en peligro cuando viven en apartamentos con balcones o ventanas en altura. Cada año, cientos de gatos en Colombia sufren caídas desde balcones — muchas veces fatales o con consecuencias permanentes.
 
 Las mallas de seguridad para gatos son una solución probada y cada vez más popular entre los dueños responsables. En esta guía te explicamos todo lo que debes saber.
+
+---
 
 ## ¿Por qué los gatos necesitan protección en balcones?
 
 A diferencia de lo que mucha gente cree, los gatos **no siempre caen de pie**. Desde alturas mayores a 2 pisos, una caída puede ser mortal o generar fracturas múltiples, trauma craneal y otras lesiones graves.
 
 Adicionalmente, los gatos que escapan por ventanas en apartamentos suelen perderse o ser atropellados. Las mallas eliminan completamente ese riesgo.
+
+---
 
 ## Características que debe tener una malla para gatos
 
@@ -37,12 +41,16 @@ Un gato adulto puede lanzarse contra la malla a toda velocidad. La malla debe es
 
 El sistema de anclaje más seguro para gatos es el perimetral, donde la malla queda tensa en todos sus bordes. Un gato que empuja la malla no debe poder abrir un hueco entre la malla y el marco.
 
+---
+
 ## Qué hacer antes de instalar la malla
 
 1. **Mide los espacios correctamente** — ancho, alto y profundidad del balcón
-2. **Verifica el estado de las barandas** — si las barandas están sueltas, corrélgolas primero
+2. **Verifica el estado de las barandas** — si las barandas están sueltas, corrígelas primero
 3. **Habla con la administración** si vives en conjunto residencial
 4. **Piensa en el mantenimiento** — necesitarás acceso para limpiar el balcón
+
+---
 
 ## Preguntas frecuentes de dueños de gatos
 
@@ -59,5 +67,7 @@ Generalmente sí, porque los sistemas modernos no requieren perforaciones extern
 Una malla de polipropileno correctamente instalada dura entre 5 y 10 años si se mantiene limpia y se evitan cortes accidentales.
 
 ---
+
+## ¿Necesitas mallas para tus gatos?
 
 ¿Tienes gatos y vives en un apartamento en Barranquilla? **[Contacta a Mayprotec](/)** para una cotización sin compromiso. Instalamos mallas especialmente diseñadas para mascotas con materiales de alta resistencia y garantía de un año.

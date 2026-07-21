@@ -7,11 +7,13 @@ image: "/images/blog-ninos-balcon.jpg"
 tags: ["niños", "seguridad", "prevención"]
 ---
 
-Protección de niños en balcones y ventanas de apartamentos: lo que debes saber
+## Protección de niños en balcones y ventanas de apartamentos: lo que debes saber
 
 Para los padres que viven en apartamentos con balcones o ventanas altas, la seguridad de sus hijos es una preocupación constante. Los niños entre 1 y 5 años son especialmente vulnerables porque aún no tienen conciencia del peligro, tienen gran curiosidad y son capaces de trepar superficies que los adultos no esperan.
 
 En esta guía te explicamos qué dice la norma en Colombia, qué opciones de protección existen y cómo evaluar cuál es la mejor para tu hogar.
+
+---
 
 ## El riesgo real: datos que todo padre debe conocer
 
@@ -24,11 +26,15 @@ Los factores de riesgo más comunes son:
 - **Ventanas que abren hacia afuera** sin tope o seguro
 - **Espacios entre barrotes mayores a 10 cm:** un niño puede pasarse
 
+---
+
 ## Normativa en Colombia
 
 El Reglamento Colombiano de Construcción Sismo Resistente (NSR-10) establece que las barandas de balcones deben tener una altura mínima de **90 cm** (en edificios residenciales de más de 3 pisos) y que el espacio entre barrotes no debe superar **10 cm**.
 
 Sin embargo, muchos edificios construidos antes del 2010 no cumplen con estas medidas actualizadas. Las mallas de seguridad son una solución práctica para complementar barandas que no cumplen los estándares actuales.
+
+---
 
 ## Opciones de protección para balcones con niños
 
@@ -50,6 +56,8 @@ Más costosos y permanentes. Buenos para terrazas de casas pero más complejos e
 
 Solo útiles si el problema es la altura de la baranda existente.
 
+---
+
 ## Recomendaciones prácticas para el hogar
 
 - Nunca dejes muebles cerca del balcón que puedan servir de escalera
@@ -58,6 +66,8 @@ Solo útiles si el problema es la altura de la baranda existente.
 - Explica a los niños desde pequeños el peligro del balcón — aunque esto no reemplaza las barreras físicas
 
 ---
+
+## ¿Necesitas protección para tus hijos?
 
 En Mayprotec instalamos mallas de seguridad diseñadas específicamente para proteger a niños en balcones y ventanas de apartamentos en Barranquilla. Materiales suaves, apertura pequeña y sistemas de anclaje certificados.
 

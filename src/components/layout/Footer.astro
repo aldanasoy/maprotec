@@ -10,7 +10,7 @@ const year = new Date().getFullYear();
       <!-- Brand -->
       <div class="lg:col-span-2">
         <div class="mb-4">
-          <Logo showText={true} size={36} variant="white" />
+          <Logo showText={true} size={36} variant="dark" />
         </div>
         <p class="text-ink-400 text-sm leading-relaxed max-w-xs">
           Empresa especializada en instalación de mallas de seguridad para balcones, ventanas y terrazas en Barranquilla y el Atlántico.
@@ -44,7 +44,7 @@ const year = new Date().getFullYear();
             ['/precios', 'Ver precios'],
           ].map(([href, label]) => (
             <li>
-              <a href={href} class="hover:text-brand-primary transition-colors">{label}</a>
+              <a href={href} class="hover:text-brand-light transition-colors duration-200">{label}</a>
             </li>
           ))}
         </ul>
@@ -62,7 +62,7 @@ const year = new Date().getFullYear();
             ['/politica-privacidad', 'Privacidad'],
           ].map(([href, label]) => (
             <li>
-              <a href={href} class="hover:text-brand-primary transition-colors">{label}</a>
+              <a href={href} class="hover:text-brand-light transition-colors duration-200">{label}</a>
             </li>
           ))}
         </ul>

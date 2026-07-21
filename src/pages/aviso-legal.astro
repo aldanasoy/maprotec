@@ -9,7 +9,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   noindex={true}
 >
 
-<article class="max-w-3xl mx-auto px-4 py-20 prose prose-sm prose-headings:text-ink-800 prose-p:text-ink-600 prose-a:text-brand-primary">
+<article class="max-w-3xl mx-auto px-4 py-16 md:py-24
+  prose prose-sm md:prose-base max-w-none
+  prose-headings:font-display prose-headings:font-bold prose-headings:text-ink-DEFAULT
+  prose-h1:text-3xl prose-h1:mt-0 prose-h1:mb-8 prose-h1:pb-4 prose-h1:border-b-2 prose-h1:border-brand-primary/20
+  prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b prose-h2:border-ink-200 prose-h2:pb-3
+  prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4
+  prose-p:text-ink-600 prose-p:leading-loose prose-p:mb-6
+  prose-a:text-brand-primary prose-a:no-underline hover:prose-a:underline prose-a:transition-colors
+  prose-strong:text-ink-DEFAULT prose-strong:font-semibold
+  prose-ul:text-ink-600 prose-li:mb-2 prose-li:leading-relaxed
+  prose-blockquote:border-l-4 prose-blockquote:border-brand-primary prose-blockquote:bg-brand-50 prose-blockquote:text-ink-600 prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:my-8 prose-blockquote:rounded-r-lg
+">
   <h1>Aviso Legal</h1>
 
   <h2>1. Identificación y Términos de Uso</h2>
@@ -17,7 +28,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <h2>2. Responsabilidad del Servicio</h2>
   <p><strong>Importante:</strong> Mayprotec actúa exclusivamente como <strong>plataforma de intermediación y conexión</strong> entre clientes y profesionales instaladores independientes. El <strong>profesional instalador es el único responsable directo</strong> de:</p>
-  
+
   <ul>
     <li>La calidad técnica de la instalación de mallas de seguridad</li>
     <li>La garantía del producto y servicios prestados</li>
@@ -28,7 +39,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </ul>
 
   <p>Mayprotec no se responsabiliza por:</p>
-  
+
   <ul>
     <li>Actos u omisiones de los profesionales instaladores</li>
     <li>Calidad, durabilidad o funcionamiento de los materiales utilizados</li>
@@ -39,7 +50,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <h2>3. Servicios Prestados por Mayprotec</h2>
   <p>Mayprotec presta exclusivamente los siguientes servicios de intermediación:</p>
-  
+
   <ul>
     <li>Publicación y promoción de servicios de instalación de mallas de seguridad</li>
     <li>Conexión inicial entre clientes interesados y profesionales instaladores disponibles</li>
@@ -50,7 +61,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <h2>4. Uso del Sitio Web</h2>
   <p>Al acceder y utilizar este Sitio, usted acepta expresamente:</p>
-  
+
   <ul>
     <li>Ser mayor de edad y capacidad legal para contratar servicios</li>
     <li>Utilizar la información con fines exclusivamente informativos</li>
@@ -64,7 +75,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <h2>6. Limitación de Responsabilidad</h2>
   <p>En máxima medida permitida por la ley, Mayprotec no será responsable por:</p>
-  
+
   <ul>
     <li>Daños directos, indirectos, incidentales o consecuentes derivados del uso del Sitio</li>
     <li>Interacciones entre clientes y profesionales instaladores conectados a través de la plataforma</li>
@@ -78,27 +89,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <h2>8. Contacto</h2>
   <p>Para cualquier consulta o reclamo relacionado con este aviso legal, puede contactarnos:</p>
-  
+
   <p><strong>Mayprotec - Aviso Legal</strong><br>
   Correo electrónico: info@mallas-barranquilla.com<br>
   Ubicación: Barranquilla, Atlántico, Colombia<br>
   Sitio web: https://mallas-barranquilla.com</p>
 
-  <hr class="my-8 border-white/20">
-  
-  <p class="text-sm text-ink-500">
+  <hr class="my-12 border-ink-200">
+
+  <p class="text-sm text-ink-500 leading-relaxed">
     <strong>Aviso importante:</strong> Este sitio web es una plataforma de conexión intermediaria. Mayprotec no es instaladora directa ni presta servicios técnicos. Todos los acuerdos contractuales se establecen directamente entre el cliente y el profesional instalador conectado a través de nuestra plataforma.
   </p>
 
-  <p class="mt-6">
-    <a href="/" class="inline-flex items-center text-brand-primary hover:text-brand-dark transition-colors">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mr-2">
+  <div class="mt-12 pt-8 border-t border-ink-200">
+    <a href="/" class="inline-flex items-center gap-2 text-brand-primary hover:text-brand-dark transition-colors font-medium">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
         <polyline points="9 22 9 12 15 12 15 22"/>
       </svg>
       Volver al inicio
     </a>
-  </p>
+  </div>
 
 </article>
 </BaseLayout>

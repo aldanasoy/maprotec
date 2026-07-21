@@ -14,9 +14,15 @@ const isWhiteBg = variant === 'white' || (variant === 'default' && className.inc
 const bgColor = isWhiteBg ? 'bg-white border border-gray-200' : 'bg-brand-primary';
 const textColor = isWhiteBg
   ? 'text-brand-primary'
-  : variant === 'dark'
-    ? 'text-brand-dark'
+  : variant === 'dark' || variant === 'white'
+    ? 'text-white'
     : 'text-ink-DEFAULT';
+const wordmarkColor = isWhiteBg
+  ? 'text-ink-DEFAULT'
+  : 'text-white';
+const submarkColor = isWhiteBg
+  ? 'text-ink-400'
+  : 'text-white/70';
 ---
 
 <a href="/" class:list={['flex items-center gap-2.5 group', className]} aria-label="Mayprotec - Inicio">
@@ -34,12 +40,12 @@ const textColor = isWhiteBg
             {isWhiteBg ? (
               <>
                 <rect width="40" height="40" rx="10" fill="white"/>
-                <rect width="40" height="40" rx="10" fill="url(#logoGrad)" opacity="0.1}"/>
+                <rect width="40" height="40" rx="10" fill="url(#logoGrad)" opacity="0.1"/>
               </>
             ) : (
               <>
                 <rect width="40" height="40" rx="10" fill="#16a34a"/>
-                <rect width="40" height="40" rx="10" fill="url(#logoGrad)" opacity="0.4}"/>
+                <rect width="40" height="40" rx="10" fill="url(#logoGrad)" opacity="0.4"/>
               </>
             )}
 
@@ -84,14 +90,14 @@ const textColor = isWhiteBg
       <span class:list={[
         'font-display font-bold tracking-tight leading-none',
         size >= 36 ? 'text-lg' : 'text-base',
-        textColor,
-        'group-hover:text-brand-dark transition-colors'
+        wordmarkColor,
+        'group-hover:text-brand-primary transition-colors'
       ]}>
-        May<span class="text-brand-dark">protec</span>
+        May<span class="text-brand-primary">protec</span>
       </span>
       <span class:list={[
         'text-[10px] font-semibold tracking-wider uppercase mt-0.5',
-        'text-brand-dark/70',
+        submarkColor,
       ]}>
         Barranquilla
       </span>
