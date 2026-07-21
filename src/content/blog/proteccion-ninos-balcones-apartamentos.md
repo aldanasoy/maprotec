@@ -62,7 +62,7 @@ Solo útiles si el problema es la altura de la baranda existente.
 
 - Nunca dejes muebles cerca del balcón que puedan servir de escalera
 - Si tu baranda tiene barrotes horizontales, cubre la parte inferior con un panel
-- Usa seguros en las ventanas que abren hacia afuera
+- Usa seguros en las ventanas que abran hacia afuera
 - Explica a los niños desde pequeños el peligro del balcón — aunque esto no reemplaza las barreras físicas
 
 ---

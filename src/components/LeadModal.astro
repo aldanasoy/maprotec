@@ -1,6 +1,6 @@
 ---
 // LeadModal.astro — Sistema de captación de leads para Mayprotec
-// Inspired by Repararya's modal system
+// Inspired by Repararya'sí modal system
 // Backend: Telegram (live) + Supabase + GestionaLeads (config via env)
 ---
 
@@ -58,7 +58,7 @@
           </div>
           <div>
             <h2 id="modal-title" class="font-display font-bold text-xl text-ink">
-              Cotizacion gratis
+              Cotización gratis
             </h2>
             <p class="text-sm text-ink-500 mt-0.5">
               Respuesta en menos de 2 horas &middot; Sin compromiso
@@ -169,7 +169,7 @@
               <line x1="22" y1="2" x2="11" y2="13"/>
               <polygon points="22 2 15 22 11 13 2 9 22 2"/>
             </svg>
-            <span id="modal-btn-text">Solicitar cotizacion gratis</span>
+            <span id="modal-btn-text">Solicitar cotización gratis</span>
           </button>
 
           <p class="text-center text-xs text-ink-400 mt-3">
@@ -278,7 +278,7 @@ function resetModal() {
   stepForm.classList.remove('hidden');
   stepSuccess.classList.add('hidden');
   errorEl.classList.add('hidden');
-  btnText.textContent = 'Solicitar cotizacion gratis';
+  btnText.textContent = 'Solicitar cotización gratis';
   submitBtn.removeAttribute('disabled');
 }
 
@@ -307,7 +307,7 @@ form.addEventListener('submit', async (e) => {
 
   // Basic validation
   if (!data.nombre || !data.telefono || !data.servicio) {
-    errorText.textContent = 'Por favor completa nombre, WhatsApp y tipo de instalacion.';
+    errorText.textContent = 'Por favor completa nombre, WhatsApp y tipo de instalación.';
     errorEl.classList.remove('hidden');
     return;
   }
@@ -383,7 +383,7 @@ form.addEventListener('submit', async (e) => {
       (data.nombre as string).split(' ')[0];
 
     const waMsg = encodeURIComponent(
-      `Hola, soy ${data.nombre}. Acabo de solicitar una cotizacion en mallas-barranquilla.com para ${data.servicio} en ${data.zona || 'Barranquilla'}.`
+      `Hola, soy ${data.nombre}. Acabo de solicitar una cotización en mallas-barranquilla.com para ${data.servicio} en ${data.zona || 'Barranquilla'}.`
     );
     (document.getElementById('success-wa-link') as HTMLAnchorElement).href =
       `https://wa.me/${CFG.WA_NUMBER}?text=${waMsg}`;
@@ -395,7 +395,7 @@ form.addEventListener('submit', async (e) => {
     errorText.textContent = 'Ocurrio un error. Por favor intentalo de nuevo.';
     errorEl.classList.remove('hidden');
     submitBtn.removeAttribute('disabled');
-    btnText.textContent = 'Solicitar cotizacion gratis';
+    btnText.textContent = 'Solicitar cotización gratis';
   }
 });
 </script>

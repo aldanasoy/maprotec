@@ -11,7 +11,7 @@ const schema = {
 };
 
 const precios = [
-  { tipo: 'Balcon pequeno (hasta 2m)', desde: '200.000', hasta: '350.000', tiempo: '1–2 hrs', popular: false },
+  { tipo: 'Balcon pequeño (hasta 2m)', desde: '200.000', hasta: '350.000', tiempo: '1–2 hrs', popular: false },
   { tipo: 'Balcon mediano (2–4m)', desde: '300.000', hasta: '500.000', tiempo: '2–3 hrs', popular: true },
   { tipo: 'Balcon grande / terraza', desde: '450.000', hasta: '900.000', tiempo: '3–5 hrs', popular: false },
   { tipo: 'Ventana estandar', desde: '150.000', hasta: '280.000', tiempo: '45–90 min', popular: false },
@@ -22,7 +22,7 @@ const precios = [
 
 <BaseLayout
   title="Precios de mallas de seguridad en Barranquilla | Mayprotec"
-  description="Consulta los precios de instalacion de mallas para balcones y ventanas en Barranquilla. Cotizacion gratuita sin compromiso. Materiales de primera calidad."
+  description="Consulta los precios de instalación de mallas para balcones y ventanas en Barranquilla. Cotización gratuita sin compromiso. Materiales de primera calidad."
   canonical="https://mallas-barranquilla.com/precios"
   schema={schema}
 >
@@ -36,7 +36,7 @@ const precios = [
       </h1>
       <p class="section-subtitle mx-auto mt-4 text-center">
         Los siguientes precios son referenciales. El precio exacto depende del area,
-        tipo de estructura y complejidad. Solicita tu cotizacion gratuita.
+        tipo de estructura y complejidad. Solicita tu cotización gratuita.
       </p>
     </div>
   </section>
@@ -49,13 +49,13 @@ const precios = [
           <div class={`relative bg-white rounded-2xl p-6 border transition-all ${p.popular ? 'border-brand shadow-lg' : 'border-ink-200/60'}`}>
             {p.popular && (
               <span class="absolute -top-3 left-6 bg-brand-dark text-white text-xs font-semibold px-3 py-1 rounded-full">
-                Mas solicitado
+                Más solicitado
               </span>
             )}
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
                 <h2 class="font-semibold text-ink">{p.tipo}</h2>
-                <p class="text-xs text-ink-400 mt-1">Tiempo de instalacion: {p.tiempo}</p>
+                <p class="text-xs text-ink-400 mt-1">Tiempo de instalación: {p.tiempo}</p>
               </div>
               <div class="text-right">
                 <p class="text-sm text-ink-400">Desde</p>

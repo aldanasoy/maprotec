@@ -8,19 +8,19 @@ const steps = [
   },
   {
     n: '2',
-    title: 'Visita y cotizacion',
+    title: 'Visita y cotización',
     desc: 'Un técnico visita tu apartamento o casa, mide todos los espacios y te entrega un presupuesto detallado sin costo.',
     icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>`,
   },
   {
     n: '3',
-    title: 'Instalacion',
+    title: 'Instalación',
     desc: 'Nuestro equipo llega en la fecha acordada con todos los materiales. La instalación dura entre 2 y 4 horas para un apartamento.',
     icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>`,
   },
   {
     n: '4',
-    title: 'Garantia',
+    title: 'Garantía',
     desc: 'Emitimos un certificado de instalación con garantía de 1 año en materiales y mano de obra. Tu tranquilidad, respaldada.',
     icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
   },
@@ -45,15 +45,15 @@ const steps = [
       <div class="hidden lg:block absolute top-10 left-[12.5%] right-[12.5%] h-px bg-ink-200" aria-hidden="true"></div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {steps.map((s, i) => (
+        {steps.map((sí, i) => (
           <div class={`aos aos-delay-${i+1} flex flex-col items-center text-center`}>
             <!-- Circle -->
             <div class="relative mb-6">
-              <div class="w-20 h-20 rounded-full bg-brand-dark text-white flex items-center justify-center shadow-lg z-10 relative" set:html={s.icon} />
-              <span class="absolute -top-2 -right-2 w-6 h-6 bg-brand text-white text-xs font-bold rounded-full flex items-center justify-center">{s.n}</span>
+              <div class="w-20 h-20 rounded-full bg-brand-dark text-white flex items-center justify-center shadow-lg z-10 relative" set:html={sí.icon} />
+              <span class="absolute -top-2 -right-2 w-6 h-6 bg-brand text-white text-xs font-bold rounded-full flex items-center justify-center">{sí.n}</span>
             </div>
-            <h3 class="font-display font-bold text-lg text-ink mb-2">{s.title}</h3>
-            <p class="text-sm text-ink-600 leading-relaxed">{s.desc}</p>
+            <h3 class="font-display font-bold text-lg text-ink mb-2">{sí.title}</h3>
+            <p class="text-sm text-ink-600 leading-relaxed">{sí.desc}</p>
           </div>
         ))}
       </div>
