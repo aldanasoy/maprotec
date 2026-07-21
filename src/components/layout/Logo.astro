@@ -9,8 +9,11 @@ interface Props {
 }
 const { size = 36, showText = true, variant = 'default', class: className = '' } = Astro.props;
 
-const textColor = variant === 'white'
-  ? 'text-white'
+// Detect white background automatically for better contrast
+const isWhiteBg = variant === 'white' || (variant === 'default' && className.includes('bg-white'));
+const bgColor = isWhiteBg ? 'bg-white border border-gray-200' : 'bg-brand-primary';
+const textColor = isWhiteBg
+  ? 'text-brand-primary'
   : variant === 'dark'
     ? 'text-brand-dark'
     : 'text-ink-DEFAULT';
@@ -18,7 +21,7 @@ const textColor = variant === 'white'
 
 <a href="/" class:list={['flex items-center gap-2.5 group', className]} aria-label="Mayprotec - Inicio">
   <!-- Icon mark -->
-  <div class="flex-shrink-0 relative" style={`width:${size}px;height:${size}px`}>
+  <div class:list={['flex-shrink-0 relative overflow-hidden rounded-lg group-hover:scale-105 transition-transform', bgColor]} style={`width:${size}px;height:${size}px`}>
     <svg
       width={size}
       height={size}
@@ -28,12 +31,20 @@ const textColor = variant === 'white'
       aria-hidden="true"
     >
       <!-- Rounded square background (Setmore-style) -->
-      <rect width="40" height="40" rx="10" fill="#16a34a"/>
-      <!-- Subtle inner glow -->
-      <rect width="40" height="40" rx="10" fill="url(#logoGrad)" opacity="0.4"/>
+            {isWhiteBg ? (
+              <>
+                <rect width="40" height="40" rx="10" fill="white"/>
+                <rect width="40" height="40" rx="10" fill="url(#logoGrad)" opacity="0.1}"/>
+              </>
+            ) : (
+              <>
+                <rect width="40" height="40" rx="10" fill="#16a34a"/>
+                <rect width="40" height="40" rx="10" fill="url(#logoGrad)" opacity="0.4}"/>
+              </>
+            )}
 
-      <!-- Mesh grid pattern (protective net motif) - subtle lines -->
-      <g opacity="0.25" stroke="white" stroke-width="0.6">
+      <!-- Mesh grid pattern (protective net motif) - white version -->
+      <g opacity={isWhiteBg ? "1" : "0.25"} stroke={isWhiteBg ? "#16a34a" : "white"} stroke-width="0.6">
         <!-- Horizontal mesh lines -->
         <line x1="6" y1="13" x2="34" y2="13"/>
         <line x1="6" y1="19" x2="34" y2="19"/>
@@ -44,16 +55,16 @@ const textColor = variant === 'white'
         <line x1="27" y1="8" x2="27" y2="32"/>
       </g>
 
-      <!-- Letter M — bold, white, geometric -->
+      <!-- Letter M — bold, adaptive -->
       <path
         d="M9 29V12L14.5 12L20 22L25.5 12H31V29H27V17.5L21.2 27.5H18.8L13 17.5V29H9Z"
-        fill="white"
+        fill={isWhiteBg ? "#16a34a" : "white"}
       />
 
       <!-- Small shield accent bottom-right -->
       <path
         d="M30 26C30 29 27.5 31 27.5 31C27.5 31 25 29 25 26V24L27.5 23L30 24V26Z"
-        fill="white"
+        fill={isWhiteBg ? "#16a34a" : "white"}
         opacity="0.9"
       />
 

@@ -4,7 +4,7 @@ const types = [
     key: 'balcones',
     title: 'Mallas para balcones',
     desc: 'La instalación más solicitada. Cubrimos toda la abertura del balcón con malla tensada, fijada a la estructura sin perforar paredes externas.',
-    img: '/images/balcon-malla.jpg',
+    img: '/images/espacio-balcon.jpg',
     alt: 'Malla de seguridad instalada en balcón de apartamento en Barranquilla',
     tag: 'Más popular',
   },
@@ -12,7 +12,7 @@ const types = [
     key: 'ventanas',
     title: 'Mallas para ventanas',
     desc: 'Protección para ventanas de cualquier tamaño. Ideal para apartamentos en pisos altos donde los niños pequeños o mascotas pueden asomarse.',
-    img: '/images/ventana-malla.jpg',
+    img: '/images/espacio-ventana.jpg',
     alt: 'Malla de seguridad para ventana en Barranquilla',
     tag: 'Alta demanda',
   },
@@ -20,15 +20,23 @@ const types = [
     key: 'terrazas',
     title: 'Mallas para terrazas',
     desc: 'Terrazas de casas y penthouses. Cubrimos espacios amplios con sistemas de tensado perimetral que soportan el peso de animales grandes.',
-    img: '/images/terraza-malla.jpg',
+    img: '/images/espacio-terraza.jpg',
     alt: 'Malla de seguridad en terraza de casa en Barranquilla',
     tag: null,
+  },
+  {
+    key: 'jardines',
+    title: 'Mallas para jardines',
+    desc: 'Protección perimetral para jardines y áreas de juego. Ideal para familias con niños o mascotas que disfrutan del aire libre.',
+    img: '/images/espacio-jardin.jpg',
+    alt: 'Malla de seguridad para jardines en Barranquilla',
+    tag: 'Familia',
   },
   {
     key: 'apartamentos',
     title: 'Apartamentos completos',
     desc: 'Paquetes integrales para apartamentos: balcón + ventanas + áreas de riesgo. Un solo contrato, un solo técnico, mejor precio.',
-    img: '/images/apartamento-malla.jpg',
+    img: '/images/proceso.jpg',
     alt: 'Instalación completa de mallas de seguridad en apartamento Barranquilla',
     tag: 'Mejor precio',
   },
@@ -36,7 +44,7 @@ const types = [
     key: 'casas',
     title: 'Casas y conjuntos',
     desc: 'Para casas de dos o tres pisos con múltiples puntos de riesgo. También trabajamos con conjuntos residenciales con volumen.',
-    img: '/images/casa-malla.jpg',
+    img: '/images/galeria-5.jpg',
     alt: 'Mallas de seguridad para casas en Barranquilla Atlántico',
     tag: null,
   },
@@ -87,14 +95,14 @@ const types = [
               {t.title}
             </h3>
             <p class="text-sm text-ink-600 leading-relaxed">{t.desc}</p>
-            <a
-              href="/#contacto"
+            <button
+              data-open-lead-modal
               class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand hover:text-brand-dark transition-colors"
               aria-label={`Cotizar ${t.title}`}
             >
               Cotizar este servicio
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
+            </button>
           </div>
         </article>
       ))}
