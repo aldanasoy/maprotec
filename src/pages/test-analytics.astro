@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Tracking IDs - EDITAR AQUÍ CON TUS IDs REALES
+const GOOGLE_ANALYTICS_ID = ''; // Ejemplo: 'G-XXXXXXXXXX'
+const GOOGLE_TAG_MANAGER_ID = ''; // Ejemplo: 'GTM-XXXXXXX'
+
+// Determine if tracking is enabled
+const trackingEnabled = GOOGLE_ANALYTICS_ID || GOOGLE_TAG_MANAGER_ID;
+---
+
+<BaseLayout
+  title="Google Analytics & Tag Manager Test | Mayprotec"
+  description="Página de prueba para verificar Google Analytics y Tag Manager tracking"
+>
+
+  <!-- TEST CONTENT -->
+  <section class="py-16 bg-white">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+      <h1 class="text-3xl font-bold text-ink-900 mb-4">
+        Test de Tracking
+      </h1>
+      <p class="text-ink-600 mb-8">
+        Esta página verifica que GA4 y GTM están funcionando correctamente.
+      </p>
+
+      <div class="bg-brand-50 border border-brand-200 rounded-lg p-6 mb-8">
+        <h2 class="text-xl font-semibold text-brand-dark mb-2">Estado de Configuración</h2>
+        <ul class="text-left text-ink-700 space-y-2">
+          <li class="flex items-center gap-2">
+            {trackingEnabled ? '✅' : '❌'} Google Analytics ID: {GOOGLE_ANALYTICS_ID || 'No configurado'}
+          </li>
+          <li class="flex items-center gap-2">
+            {trackingEnabled ? '✅' : '❌'} Google Tag Manager ID: {GOOGLE_TAG_MANAGER_ID || 'No configurado'}
+          </li>
+        </ul>
+      </div>
+
+      <div class="space-y-4">
+        <button
+          type="button"
+          class="btn-primary"
+          onClick={() => {
+            if (typeof window !== 'undefined' && (window as any).gtag) {
+              (window as any).gtag('event', 'test_click', {
+                'event_category': 'Test',
+                'event_label': 'Button Click',
+                'value': 1
+              });
+              alert('Evento enviado a Google Analytics');
+            } else {
+              alert('Google Analytics no está configurado');
+            }
+          }}
+        >
+          Test Evento GA4
+        </button>
+
+        <button
+          type="button"
+          class="btn-secondary"
+          onClick={() => {
+            if (typeof window !== 'undefined' && (window as any).dataLayer) {
+              (window as any).dataLayer.push({
+                'event': 'test_event',
+                'eventCategory': 'Test',
+                'eventAction': 'Button Click',
+                'eventLabel': 'Test Button'
+              });
+              alert('Evento enviado a GTM');
+            } else {
+              alert('Google Tag Manager no está configurado');
+            }
+          }}
+        >
+          Test Evento GTM
+        </button>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #1B9C85 0%, #15A088 100%);
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(27, 156, 133, 0.3);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background: #F7F5F2;
+    color: #0F1419;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s;
+    border: 2px solid #1B9C85;
+    cursor: pointer;
+  }
+
+  .btn-secondary:hover {
+    background: #E8F5F1;
+  }
+</style>

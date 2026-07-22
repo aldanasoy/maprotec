@@ -75,6 +75,29 @@ const whatsapp = '[WHATSAPP_NUM]';   // ← e.g. 573001234567
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+  <!-- Google Tag Manager -->
+  <script is:inline>
+    // Google Tag Manager - Configurar ID en /src/config/analytics.ts
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    // Google Analytics 4 (si está configurado)
+    const GA_ID = ''; // Reemplazar con tu G-XXXXXXXXXX
+    if (GA_ID) {
+      gtag('config', GA_ID, {
+        'anonymize_ip': true,
+        'cookie_flags': 'SameSite=None;Secure'
+      });
+    }
+  </script>
+
+  <!-- Google Tag Manager noscript -->
+  <noscript is:inline>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
   <!-- JSON-LD Schema -->
   {schema && (
     <script type="application/ld+json" set:html={JSON.stringify(
